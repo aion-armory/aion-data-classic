@@ -19,6 +19,7 @@ public class Equipment extends Item {
     private int extraManastones;
     private Attributes attributes;
     private EquipmentType equipmentType;
+    private int combatPowerPoints;
 
     public Equipment(EquipmentSlotType slot) {
         this.slot = slot;

@@ -15,4 +15,6 @@ public interface EquipmentType {
         return equipmentTypes;
     }
 
+    String name();
+
 }
