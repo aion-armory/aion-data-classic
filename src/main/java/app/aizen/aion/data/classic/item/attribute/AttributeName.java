@@ -5,13 +5,13 @@ import app.aizen.aion.data.classic.item.StringUtils;
 public enum AttributeName {
 
     BLEED_RESIST,
-    BLIND_RESIT,
+    BLIND_RESIST,
     CHARM_RESIST,
     CONFUSE_RESIST,
     CURSE_RESIST,
     DISEASE_RESIST,
     FEAR_RESIST,
-    OPEN_AREIAL_RESITS,
+    OPEN_AREIAL_RESIST,
     PARALYZE_RESIST,
     PERIFICATION_RESIST,
     POISON_RESIST,

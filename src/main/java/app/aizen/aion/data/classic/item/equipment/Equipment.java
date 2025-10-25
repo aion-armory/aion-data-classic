@@ -1,6 +1,7 @@
 package app.aizen.aion.data.classic.item.equipment;
 
-import app.aizen.aion.data.classic.item.*;
+import app.aizen.aion.data.classic.item.Item;
+import app.aizen.aion.data.classic.item.ItemType;
 import app.aizen.aion.data.classic.item.attribute.Attributes;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,8 +19,8 @@ public class Equipment extends Item {
     private EquipmentSlotType slot;
     private int extraManastones;
     private Attributes attributes;
-    private EquipmentType equipmentType;
-    private int combatPowerPoints;
+    private int combatPower;
+    private EquipmentType equipment;
 
     public Equipment(EquipmentSlotType slot) {
         this.slot = slot;
@@ -31,21 +32,18 @@ public class Equipment extends Item {
             case LEFT_HAND -> {
                 return Equipment.createArmor(slot, ArmorType.SHIELD);
             }
-            case HEAD -> {
-                return Equipment.createArmor(slot, ArmorType.HEADGEAR);
-            }
             case WING -> {
-                return Equipment.createArmor(slot, ArmorType.WING);
+                return Equipment.createArmor(slot, ArmorType.WINGS);
             }
             case TORSO, GLOVE, SHOULDER, LEG, FOOT -> {
                 return Equipment.createArmor(slot, null);
 
             }
             case RIGHT_HAND_OR_LEFT_HAND, RIGHT_HAND -> {
-                return Equipment.createWeapon(slot, null);
+                return Equipment.createWeapon(slot);
 
             }
-            case EAR, NECK, WAIST, FINGER -> {
+            case HEAD, EAR, NECK, WAIST, FINGER -> {
                 return Equipment.createAccessory(slot);
             }
             default -> {
@@ -54,16 +52,13 @@ public class Equipment extends Item {
         }
     }
 
-    public static Weapon createWeapon(EquipmentSlotType slot, WeaponType weaponType) {
-        Weapon weapon = new Weapon(slot);
-        weapon.setEquipmentType(weaponType);
-
-        return weapon;
+    public static Weapon createWeapon(EquipmentSlotType slot) {
+        return new Weapon(slot);
     }
 
-    public static Armor createArmor(EquipmentSlotType slot, ArmorType armorType) {
+    public static Armor createArmor(EquipmentSlotType slot, EquipmentType armorType) {
         Armor armor = new Armor(slot);
-        armor.setEquipmentType(armorType);
+        armor.setEquipment(armorType);
 
         return armor;
     }
@@ -73,12 +68,13 @@ public class Equipment extends Item {
 
         AccessoryType accessoryType = NO_ACCESSORY;
         switch (slot) {
+            case HEAD -> accessoryType = HEADGEAR;
             case NECK -> accessoryType = NECKLACE;
             case EAR -> accessoryType = EARRING;
             case FINGER -> accessoryType = RING;
             case WAIST -> accessoryType = BELT;
         }
-        accessory.setEquipmentType(accessoryType);
+        accessory.setEquipment(accessoryType);
 
         return accessory;
     }

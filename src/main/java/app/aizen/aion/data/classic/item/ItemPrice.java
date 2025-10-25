@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
 import java.util.Map;
 
 @Getter
@@ -19,11 +20,11 @@ public class ItemPrice {
     private int extraCurrencyItemCount;
 
     private int tradeInAbyssPoint;
-    private Map<String, Integer> tradeInItems;
+    private List<TradeItem> tradeItems;
 
     public boolean isEmpty() {
         return abyssItemCount == 0 && extraCurrencyItemCount == 0 && tradeInAbyssPoint == 0 && abyssPoint == 0
-                && extraCurrencyItem == null && abyssItem == null && tradeInItems == null;
+                && extraCurrencyItem == null && abyssItem == null && tradeItems == null;
     }
 
 }

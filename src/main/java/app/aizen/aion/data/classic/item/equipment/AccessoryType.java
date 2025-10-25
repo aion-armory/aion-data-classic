@@ -4,6 +4,7 @@ import app.aizen.aion.data.classic.item.StringUtils;
 
 public enum AccessoryType implements EquipmentType {
 
+    HEADGEAR,
     NECKLACE,
     EARRING,
     RING,

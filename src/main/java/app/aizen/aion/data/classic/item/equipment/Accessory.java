@@ -1,9 +1,7 @@
 package app.aizen.aion.data.classic.item.equipment;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import app.aizen.aion.data.classic.item.ItemType;
+import lombok.*;
 
 @Getter
 @Setter
@@ -13,6 +11,7 @@ public class Accessory extends Armor {
 
     public Accessory(EquipmentSlotType slot) {
         super(slot);
+        this.type = ItemType.ACCESSORY;
     }
 
 }

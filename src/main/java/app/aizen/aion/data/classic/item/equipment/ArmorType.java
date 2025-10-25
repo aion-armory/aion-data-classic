@@ -10,8 +10,7 @@ public enum ArmorType implements EquipmentType {
     CHAIN,
     PLATE,
     SHIELD,
-    WING,
-    HEADGEAR,
+    WINGS,
     NO_ARMOR;
 
     @Override

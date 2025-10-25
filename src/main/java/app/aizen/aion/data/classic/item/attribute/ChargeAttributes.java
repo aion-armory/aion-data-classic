@@ -11,7 +11,7 @@ import java.util.Map;
 @ToString
 public class ChargeAttributes {
 
-    private ChargeLevel chargeLevel;
+    private Integer level;
     private Map<String, Integer> attributes;
 
 }
