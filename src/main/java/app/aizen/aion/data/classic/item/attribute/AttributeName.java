@@ -74,7 +74,9 @@ public enum AttributeName {
     PVE_ATTACK_RATIO,
     PVE_DEFEND_RATIO,
     PVP_ATTACK_RATIO,
-    PVP_DEFEND_RATIO;
+    PVP_DEFEND_RATIO,
+    ALL_DEFEND_RATIO,
+    ALL_ATTACK_RATIO;
 
     @Override
     public String toString() {
