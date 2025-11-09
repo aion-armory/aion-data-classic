@@ -4,7 +4,9 @@ public enum ItemType {
 
     WEAPON,
     ARMOR,
-    ACCESSORY;
+    ACCESSORY,
+    MAGICSTONE,
+    HOLYSTONE;
 
     @Override
     public String toString() {

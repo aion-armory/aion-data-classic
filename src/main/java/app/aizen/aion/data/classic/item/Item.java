@@ -18,6 +18,5 @@ public class Item {
     private ItemQuality quality;
     private ItemPrice price;
     protected ItemType type;
-    private boolean canBeEnhanced;
 
 }

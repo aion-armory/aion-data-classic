@@ -1,7 +1,6 @@
 package app.aizen.aion.data.classic.item.equipment;
 
 import app.aizen.aion.data.classic.item.Item;
-import app.aizen.aion.data.classic.item.ItemType;
 import app.aizen.aion.data.classic.item.attribute.Attributes;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +20,7 @@ public class Equipment extends Item {
     private Attributes attributes;
     private int combatPower;
     private EquipmentType equipment;
+    private boolean canBeEnhanced;
 
     public Equipment(EquipmentSlotType slot) {
         this.slot = slot;
