@@ -11,6 +11,7 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class Godstone extends Item {
 
+    private String descriptionProc;
     private int combatPower;
 
     public Godstone() {

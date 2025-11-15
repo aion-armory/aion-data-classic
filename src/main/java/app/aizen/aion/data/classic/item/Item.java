@@ -11,6 +11,7 @@ public class Item {
 
     private int id;
     private String stringId;
+    private String description;
     private int level;
     private String icon;
     private String name;
