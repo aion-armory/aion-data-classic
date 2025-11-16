@@ -9,9 +9,11 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class ItemSkill {
+public class EquipmentSkill {
 
-    private String itemName;
+    private int id;
+    private String name;
+    private EquipmentParameters equipmentParameters;
     private List<EnchantProbability> enchant;
 
 }

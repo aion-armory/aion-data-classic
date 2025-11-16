@@ -21,6 +21,7 @@ public class Equipment extends Item {
     private int combatPower;
     private EquipmentType equipment;
     private boolean canBeEnhanced;
+    private String equipmentSkill;
 
     public Equipment(EquipmentSlotType slot) {
         this.slot = slot;
@@ -77,6 +78,10 @@ public class Equipment extends Item {
         accessory.setEquipment(accessoryType);
 
         return accessory;
+    }
+
+    public boolean hasEquipmentSkill() {
+        return equipmentSkill != null;
     }
 
 }
