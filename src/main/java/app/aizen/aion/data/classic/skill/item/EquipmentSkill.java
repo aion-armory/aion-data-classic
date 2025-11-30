@@ -13,7 +13,6 @@ public class EquipmentSkill {
 
     private int id;
     private String name;
-    private EquipmentParameters equipmentParameters;
     private List<EnchantProbability> enchant;
 
 }

@@ -28,4 +28,23 @@ public class StringUtils {
         return camelCase.toString();
     }
 
+    public static String camelCaseToSnakeCase(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isUpperCase(ch)) {
+                if (i != 0) {
+                    result.append('_');
+                }
+                result.append(Character.toLowerCase(ch));
+            } else {
+                result.append(ch);
+            }
+        }
+
+        return result.toString();
+    }
+
 }

@@ -80,8 +80,4 @@ public class Equipment extends Item {
         return accessory;
     }
 
-    public boolean hasEquipmentSkill() {
-        return equipmentSkill != null;
-    }
-
 }
