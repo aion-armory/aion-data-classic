@@ -16,6 +16,7 @@ public enum WeaponType implements EquipmentType {
     CHAINSWORD,
     DRAGON_CLAW,
     DIMENSIONAL_SWORD,
+    RUNE_SWORD,
     GUN,
     NO_WEAPON;
 
