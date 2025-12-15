@@ -11,8 +11,9 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class Manastone extends Item {
 
-    private String enchantType;
-    private int enchantValue;
+    private String attribute;
+    private int value;
+    private int combatPower;
 
     public Manastone() {
         this.type = ItemType.MAGICSTONE;
