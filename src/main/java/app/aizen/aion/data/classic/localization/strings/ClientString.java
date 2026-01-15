@@ -1,5 +1,4 @@
-package app.aizen.aion.data.classic.locale.strings;
-
+package app.aizen.aion.data.classic.localization.strings;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
