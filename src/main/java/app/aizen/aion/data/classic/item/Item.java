@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString
@@ -19,5 +21,6 @@ public class Item {
     private ItemQuality quality;
     private ItemPrice price;
     protected ItemType type;
+    private boolean canBeUpgraded;
 
 }

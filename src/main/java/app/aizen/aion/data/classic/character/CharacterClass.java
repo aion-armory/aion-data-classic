@@ -5,6 +5,14 @@ import lombok.Getter;
 
 @Getter
 public enum CharacterClass {
+
+    ALL,
+    WARRIOR,
+    SCOUT,
+    CLERIC,
+    MONK,
+    MAGE,
+    STRIKER,
     FIGHTER,
     KNIGHT,
     CHANTER,
@@ -14,7 +22,10 @@ public enum CharacterClass {
     WIZARD,
     ELEMENTALIST,
     THUNDERER,
-    BATTLEMASTER;
+    BATTLEMASTER,
+    LUMINES,
+    GUNNER,
+    RUNEBLADE;
 
     @Override
     public String toString() {
