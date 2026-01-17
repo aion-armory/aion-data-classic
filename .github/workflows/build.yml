@@ -1,0 +1,35 @@
+name: Build Aion Data Classic
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build jar using Docker
+        run: |
+          docker buildx build \
+            --build-arg MAVEN_REPO_LOCAL=/root/.m2 \
+            --mount type=bind,source=${HOME}/.m2,target=/root/.m2 \
+            -f deploy/Dockerfile.build \
+            -t aion-data-classic-builder .
+
+      - name: Extract jar from builder image
+        run: |
+          container_id=$(docker create aion-data-classic-builder)
+          mkdir -p target
+          docker cp $container_id:/build/target/. target/
+          docker rm $container_id
+
+      - name: Upload jar artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aion-data-classic
+          path: target/*.jar
