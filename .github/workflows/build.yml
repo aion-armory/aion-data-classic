@@ -15,11 +15,11 @@ jobs:
 
       - name: Build jar using Docker
         run: |
-          docker buildx build \
-            --build-arg MAVEN_REPO_LOCAL=/root/.m2 \
-            --mount type=bind,source=${HOME}/.m2,target=/root/.m2 \
-            -f deploy/Dockerfile.build \
-            -t aion-data-classic-builder .
+          docker build \
+          --build-arg MAVEN_REPO_LOCAL=/root/.m2 \
+          -v ${HOME}/.m2:/root/.m2 \
+          -f deploy/Dockerfile.build \
+          -t aion-data-classic-builder .
 
       - name: Extract jar from builder image
         run: |
