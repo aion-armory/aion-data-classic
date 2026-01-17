@@ -16,7 +16,7 @@ jobs:
       - name: Build jar using Docker
         run: |
           docker build \
-          -f deploy/Dockerfile.build \
+          -f deploy/build.dockerfile \
           -t aion-data-classic-builder .
 
       - name: Extract jar from builder image
