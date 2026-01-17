@@ -16,8 +16,6 @@ jobs:
       - name: Build jar using Docker
         run: |
           docker build \
-          --build-arg MAVEN_REPO_LOCAL=/root/.m2 \
-          -v ${HOME}/.m2:/root/.m2 \
           -f deploy/Dockerfile.build \
           -t aion-data-classic-builder .
 
