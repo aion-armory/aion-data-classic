@@ -6,7 +6,8 @@ public enum ItemType {
     ARMOR,
     ACCESSORY,
     MAGICSTONE,
-    HOLYSTONE;
+    HOLYSTONE,
+    BUNDLE;
 
     @Override
     public String toString() {
