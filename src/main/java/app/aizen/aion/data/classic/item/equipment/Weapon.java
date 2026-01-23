@@ -9,19 +9,19 @@ import lombok.*;
 @NoArgsConstructor
 public class Weapon extends Equipment {
 
-    private int minDamage;
-    private int maxDamage;
+    private Integer minDamage;
+    private Integer maxDamage;
 
-    private int attackSpeed;
+    private Integer attackSpeed;
     private WeaponAttackType attackType;
-    private int hitCount;
+    private Integer hitCount;
 
     public Weapon(EquipmentSlotType slot) {
         super(slot);
         this.type = ItemType.WEAPON;
     }
 
-    public void damageRange(int minDamage, int maxDamage) {
+    public void damageRange(Integer minDamage, Integer maxDamage) {
         this.minDamage = minDamage;
         this.maxDamage = maxDamage;
     }

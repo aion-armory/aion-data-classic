@@ -9,7 +9,7 @@ import lombok.ToString;
 @ToString
 public class CombatPowerRule {
 
-    private String type;
+    private CombatPowerType type;
     private String value;
     private int points;
 
