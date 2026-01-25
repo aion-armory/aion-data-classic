@@ -16,6 +16,8 @@ public class Weapon extends Equipment {
     private WeaponAttackType attackType;
     private Integer hitCount;
 
+    private Integer attackRange;
+
     public Weapon(EquipmentSlotType slot) {
         super(slot);
         this.type = ItemType.WEAPON;
