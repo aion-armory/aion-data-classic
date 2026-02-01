@@ -23,7 +23,6 @@ public class ClassSkill {
     private int level;
     private int skillLevel;
     private List<SkillEffect> effects;
-    private Boolean autoLearn;
+    private SkillType skillType;
     private Map<String, Object> localizationPlaceholders;
-
 }
