@@ -9,6 +9,7 @@ import lombok.ToString;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 @Getter
 @Setter
@@ -22,11 +23,22 @@ public class Skill implements LocalizableEntity {
     private String type;
     private String subType;
     private String category;
+    private String chainCategory;
+    private Integer chainCategoryLevel;
+    private Integer repeat;
+    private String groupName;
     private String activation;
+    private String costUnit;
+    private Integer costValue;
+    private Integer costStepPerLevel;
+    private Integer delayType;
+    private Integer delayTime;
     private String target;
+    private Integer targetDistance;
     private String icon;
-    private int delay;
-    private List<SkillEffect> effects;
+    private Boolean moveCasting;
+    private Integer castingDelay;
+    private List<Map<String, String>> effects;
 
     @Override
     public Collection<LocalizationKey> localizationKeys() {
