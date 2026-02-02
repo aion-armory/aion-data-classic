@@ -1,4 +1,4 @@
-package app.aizen.aion.data.classic.skill.base;
+package app.aizen.aion.data.classic.skill;
 
 import app.aizen.aion.data.classic.localization.LocalizableEntity;
 import app.aizen.aion.data.classic.localization.LocalizationField;
@@ -14,31 +14,31 @@ import java.util.Map;
 @Getter
 @Setter
 @ToString
+@SuppressWarnings("unused")
 public class Skill implements LocalizableEntity {
 
     private int id;
     private String stringId;
     private String name;
-    private String description;
-    private String type;
-    private String subType;
-    private String category;
-    private String chainCategory;
-    private Integer chainCategoryLevel;
-    private Integer repeat;
-    private String groupName;
-    private String activation;
-    private String costUnit;
-    private Integer costValue;
-    private Integer costStepPerLevel;
-    private Integer delayType;
-    private Integer delayTime;
-    private String target;
-    private Integer targetDistance;
     private String icon;
-    private Boolean moveCasting;
+    private String description;
+
+    private String groupName;
+    private int groupLevel;
+
+    private SkillActivation activation;
+
+    private SkillCost cost;
+
+    private Integer delayTime;
+
+    private SkillTarget target;
+    private Integer targetDistance;
+
+    private SkillCasting casting;
     private Integer castingDelay;
-    private List<Map<String, String>> effects;
+
+    private List<Map<String, String>> effects; //temp filed for debugging
 
     @Override
     public Collection<LocalizationKey> localizationKeys() {

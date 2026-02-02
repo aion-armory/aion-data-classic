@@ -1,4 +1,4 @@
-package app.aizen.aion.data.classic.skill.item;
+package app.aizen.aion.data.classic.skill;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,6 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@SuppressWarnings("unused")
 public class EquipmentSkill {
 
     private int id;

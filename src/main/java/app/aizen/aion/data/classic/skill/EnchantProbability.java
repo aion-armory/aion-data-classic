@@ -1,4 +1,4 @@
-package app.aizen.aion.data.classic.skill.item;
+package app.aizen.aion.data.classic.skill;
 
 import lombok.Getter;
 import lombok.Setter;
