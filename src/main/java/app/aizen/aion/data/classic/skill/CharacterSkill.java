@@ -21,6 +21,7 @@ public class CharacterSkill {
     private int level;
     private int skillLevel;
     private Skill skill;
+    private SkillCost cost;
     private List<SkillEffect> effects;
     private Map<String, Object> localizationPlaceholders;
 

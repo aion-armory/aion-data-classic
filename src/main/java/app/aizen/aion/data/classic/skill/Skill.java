@@ -28,7 +28,10 @@ public class Skill implements LocalizableEntity {
 
     private SkillActivation activation;
 
-    private SkillCost cost;
+    private String costUnit;
+    private Integer costValue;
+    private Integer costPerLevel;
+    private Integer costDP;
 
     private Integer delayTime;
 

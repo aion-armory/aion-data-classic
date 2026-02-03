@@ -11,6 +11,9 @@ public class SkillCost {
 
     private String unit;
     private Integer value;
-    private Integer stepPerSkillLevel;
+
+    public boolean noCost() {
+        return (value == null || value == 0);
+    }
 
 }
