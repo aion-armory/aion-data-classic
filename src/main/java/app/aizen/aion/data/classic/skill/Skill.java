@@ -41,7 +41,7 @@ public class Skill implements LocalizableEntity {
     private SkillCasting casting;
     private Integer castingDelay;
 
-    private List<Map<String, String>> effects; //temp filed for debugging
+    private List<SkillEffect> effects;
 
     @Override
     public Collection<LocalizationKey> localizationKeys() {
